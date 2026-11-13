@@ -1189,10 +1189,10 @@
 		1B2E13A12616308E005C380C /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = Sileo/hu.lproj/Errors.strings; sourceTree = "<group>"; };
 		1B2E13A22616308E005C380C /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = Sileo/hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1B2E13A32616308E005C380C /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = hu; path = Sileo/hu.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
-		1B2E13A426163198005C380C /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = Sileo/nb.lproj/Categories.strings; sourceTree = "<group>"; };
-		1B2E13A526163198005C380C /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = Sileo/nb.lproj/Errors.strings; sourceTree = "<group>"; };
-		1B2E13A626163198005C380C /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = Sileo/nb.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1B2E13A726163198005C380C /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = nb; path = Sileo/nb.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		1B2E13A426163198005C380C /* no */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = no; path = Sileo/no.lproj/Categories.strings; sourceTree = "<group>"; };
+		1B2E13A526163198005C380C /* no */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = no; path = Sileo/no.lproj/Errors.strings; sourceTree = "<group>"; };
+		1B2E13A626163198005C380C /* no */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = no; path = Sileo/no.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1B2E13A726163198005C380C /* no */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = no; path = Sileo/no.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		1B2E13A82616320B005C380C /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = Sileo/pl.lproj/Categories.strings; sourceTree = "<group>"; };
 		1B2E13A92616320B005C380C /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = Sileo/pl.lproj/Errors.strings; sourceTree = "<group>"; };
 		1B2E13AA2616320B005C380C /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = Sileo/pl.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -3453,7 +3453,7 @@
 				fi,
 				he,
 				hu,
-				nb,
+				no,
 				pl,
 				ru,
 				ro,
@@ -4636,7 +4636,7 @@
 				1B2E139A26163010005C380C /* fi */,
 				1B2E139E26163070005C380C /* he */,
 				1B2E13A22616308E005C380C /* hu */,
-				1B2E13A626163198005C380C /* nb */,
+				1B2E13A626163198005C380C /* no */,
 				1B2E13AA2616320B005C380C /* pl */,
 				1B2E13AE2616323D005C380C /* ru */,
 				1B2E13B226163267005C380C /* ro */,
@@ -4676,7 +4676,7 @@
 				1B2E13992616300F005C380C /* fi */,
 				1B2E139D26163070005C380C /* he */,
 				1B2E13A12616308E005C380C /* hu */,
-				1B2E13A526163198005C380C /* nb */,
+				1B2E13A526163198005C380C /* no */,
 				1B2E13A92616320B005C380C /* pl */,
 				1B2E13AD2616323D005C380C /* ru */,
 				1B2E13B126163266005C380C /* ro */,
@@ -4716,7 +4716,7 @@
 				1B2E13982616300F005C380C /* fi */,
 				1B2E139C26163070005C380C /* he */,
 				1B2E13A02616308E005C380C /* hu */,
-				1B2E13A426163198005C380C /* nb */,
+				1B2E13A426163198005C380C /* no */,
 				1B2E13A82616320B005C380C /* pl */,
 				1B2E13AC2616323D005C380C /* ru */,
 				1B2E13B026163266005C380C /* ro */,
@@ -4756,7 +4756,7 @@
 				1B2E139B26163010005C380C /* fi */,
 				1B2E139F26163071005C380C /* he */,
 				1B2E13A32616308E005C380C /* hu */,
-				1B2E13A726163198005C380C /* nb */,
+				1B2E13A726163198005C380C /* no */,
 				1B2E13AB2616320C005C380C /* pl */,
 				1B2E13AF2616323D005C380C /* ru */,
 				1B2E13B326163267005C380C /* ro */,
