@@ -750,7 +750,7 @@
     "Sileo/UI/SourcesViewController/SourcesErrorsViewController/SourcesErrorsViewController.xib": "61a5b98f34538d63db83b39be12b3d379ca2062ee500945718879199e83b8fad",
     "Sileo/UI/SourcesViewController/SourcesSplitViewController.swift": "0b0f7589b45b123f1225b09aaca502fe2c261f00589c170fa0083a45e97d5029",
     "Sileo/UI/SourcesViewController/SourcesViewController.swift": "a361dda0aa67fa92db74d022f3f76538a97f69695d92983b8b5954a8f0ec1819",
-    "Sileo/UI/TabBarController/TabBar.swift": "caa6d668bb3e342d1eb00a7555cb5d85b998c11a96fa5360640a610153d78a0a",
+    "Sileo/UI/TabBarController/TabBar.swift": "6481b55350865be71e9297acf4f668033a8d39fad4ba8d406f9200ba2d104188",
     "Sileo/UI/TabBarController/TabBarController.swift": "9e8eeff134b6db9421ce15622d72c59dcad5bf15ec37d0560e291da6cac1bd54",
     "Sileo/UI/Utils/BaseSubtitleTableViewCell.swift": "16590392a4495d9b2ad88a0b11fbdedb2a5292df7b01483feabd51f56c5b9032",
     "Sileo/UI/Utils/ImageLoader.swift": "40a0f4de7cd2408f464249a8cb1b33a68854e9d3527be78761e5cebff93c35b1",

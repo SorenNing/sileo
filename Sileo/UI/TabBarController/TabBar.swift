@@ -329,7 +329,7 @@ class TabBar: UITabBar, UIGestureRecognizerDelegate {
         return super.hitTest(point, with: event)
     }
 
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         guard let pan = gestureRecognizer as? UIPanGestureRecognizer,
               surface.frame.contains(pan.location(in: self)),
               onDockSelection != nil else { return false }
