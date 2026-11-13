@@ -9,6 +9,8 @@
 #ifndef dpkgversion_h
 #define dpkgversion_h
 
+#include <sys/types.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <string.h>
 #include <errno.h>
