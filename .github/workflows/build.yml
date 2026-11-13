@@ -1,0 +1,89 @@
+name: Sileo Ning Glass Dock
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sileo-manual-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: macos-latest
+    timeout-minutes: 55
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: '1'
+      HOMEBREW_NO_INSTALL_CLEANUP: '1'
+    steps:
+      - name: Checkout exact source and submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          persist-credentials: false
+
+      - name: Select Xcode and record toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -d /Applications/Xcode_16.4.app ]]; then
+            sudo xcode-select --switch /Applications/Xcode_16.4.app
+          fi
+          xcodebuild -version
+          xcrun swift --version
+          xcrun --sdk iphoneos --show-sdk-version
+          git rev-parse HEAD
+          git submodule status
+
+      - name: Verify reviewed source manifest
+        run: python3 Scripts/NingVerifySource.py
+
+      - name: Install signing tools
+        run: brew install ldid
+
+      - name: Compile once for iOS arm64
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build-logs
+          xcodebuild -resolvePackageDependencies -project Sileo.xcodeproj -scheme Sileo \
+            -clonedSourcePackagesDirPath "$RUNNER_TEMP/SileoPackages" 2>&1 | tee build-logs/resolve.log
+          xcodebuild -project Sileo.xcodeproj -scheme Sileo -configuration Release \
+            -sdk iphoneos -destination 'generic/platform=iOS' \
+            -derivedDataPath "$RUNNER_TEMP/SileoBuild" \
+            -clonedSourcePackagesDirPath "$RUNNER_TEMP/SileoPackages" \
+            -disableAutomaticPackageResolution \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY='' \
+            DEVELOPMENT_TEAM='' ARCHS=arm64 ONLY_ACTIVE_ARCH=NO \
+            IPHONEOS_DEPLOYMENT_TARGET=13.0 SWIFT_VERSION=5 \
+            ENABLE_USER_SCRIPT_SANDBOXING=NO ENABLE_BITCODE=NO \
+            ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES=NO \
+            PRODUCT_BUNDLE_IDENTIFIER=org.coolstar.SileoStore DISPLAY_NAME=Sileo \
+            MARKETING_VERSION=2.5.1 CURRENT_PROJECT_VERSION="${GITHUB_RUN_NUMBER}" \
+            build 2>&1 | tee build-logs/build.log
+
+      - name: Sign and package without distribution certificates
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 Scripts/NingPackage.py --app "$RUNNER_TEMP/SileoBuild/Build/Products/Release-iphoneos/Sileo.app"
+
+      - name: Upload packages and source receipt
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Sileo-Ning-Dock-${{ github.run_id }}
+          path: packages/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload build logs even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Sileo-build-logs-${{ github.run_id }}
+          path: build-logs/
+          if-no-files-found: ignore
+          retention-days: 14
