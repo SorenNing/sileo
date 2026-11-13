@@ -318,7 +318,7 @@
     "Sileo/Backend/APT Wrapper/APTWrapper.swift": "d1ff750c6e8371b198cc2768df8c1c0016193d3aa837f062f8f28ed21b6c36f0",
     "Sileo/Backend/C Contrib/decompression.c": "2b989b0881730eb7b51b3a54e7d04a2b85a92aa9323f309a6deb0c6f41b11da7",
     "Sileo/Backend/C Contrib/decompression.h": "229c5e72fefdcde33e958e821320ca84ef4d85df6e5d7da86617dff32d1825d2",
-    "Sileo/Backend/C Contrib/dpkgversion.c": "96266c773b45c4d6e11ceb2b1ca41296ad66f3c637a75e6c4a05976d57fc3c38",
+    "Sileo/Backend/C Contrib/dpkgversion.c": "ec6561a916e0dcd74b5d551b4812050a541611e6480f5727d9d45fbe893ec176",
     "Sileo/Backend/C Contrib/dpkgversion.h": "fee638ad6afdf2d2fa48ddfc480348f2df6c8fbcff41d8b6d72dffe6635d0f70",
     "Sileo/Backend/Canister Resolver/CanisterResolver.swift": "35149164b122cfdcfc1688734746134ec1546bed5108e8473213e89421d09138",
     "Sileo/Backend/Control File Parser/ControlFileParser.swift": "b00b543cde7b6d153de84e7f65b812431a4dae837c9165ca6d3918b01c0b5541",

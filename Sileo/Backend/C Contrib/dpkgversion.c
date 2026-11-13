@@ -22,7 +22,12 @@ int order(char ch) {
 int validate(char *string, int *length) {
     for (int i = 0; i < *length; i++) {
         char character = string[i];
-        if (!(isdigit(character) || isalpha(character) || strrchr(".-+~:", character))) {
+        // Keep this as explicit comparisons. The old strrchr(".-+~:",
+        // character) membership idiom is lowered by modern clang to a
+        // Darwin-unavailable memrchr reference during the final link.
+        if (!(isdigit(character) || isalpha(character) ||
+              character == '.' || character == '-' || character == '+' ||
+              character == '~' || character == ':')) {
             return 1;
         }
     }
