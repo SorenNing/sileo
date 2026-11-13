@@ -5,7 +5,7 @@
     ".githooks/commit-msg": "b1f0c1d253b746a76cb59523a2318aaf67754dfc52321da4af65d3f92d09a98f",
     ".github/upstream-workflows/main.yml.txt": "cb16665a3a4aa2032203dc855ed9b0be605d82d9052c766519aaaebf4450354c",
     ".github/upstream-workflows/release.yml.txt": "05ed798a12da64d3262fe86ef5c7ebe1bd55c679e9d9390c863f19b04733b4c2",
-    ".github/workflows/build.yml": "3e67c2d692932a5f3acf619cbbbca93c954ef374018cc45058351086a59d420b",
+    ".github/workflows/build.yml": "8b4f27a524ad7f12c47636b857d3f4780ef2a1e7062c265fc3c4dcbc77f78688",
     ".gitignore": "95067854f6eb26a42384ff9e4779f7d927db49248e38bb3ac35b5f3e69eecb2b",
     ".gitmodules": "d8f46e1d16efdd97de6adf9f6f628f6510bc84a8a0d6bfa26524dc3a782699d2",
     ".swiftlint.yml": "0b6f15b553a325cf2676cdcff6afbfb1c15ccdf4e16d490ad4e3b4fe88d40222",
@@ -794,7 +794,8 @@
     "layout/DEBIAN/postinst.in": "d3a29e82185cf9354bdf04c3ec94278b5604c85450f46bd0509fcc2bdfd7d033",
     "layout/DEBIAN/prerm": "c10b8d9778ddf0b837c4d81c099fa8944651db02ddfef865b76e7527d75edf23",
     "layout/DEBIAN/prerm-mac": "f4e1dcbe615c4cc9aefee73cacf84da3279068a8905c11bce4204145edde06b9",
-    "layout/DEBIAN/triggers": "8dc4d5028d40c9fe9a480d5372139ad91ccf3b66f5381cff8fd274d702fc07ad"
+    "layout/DEBIAN/triggers": "8dc4d5028d40c9fe9a480d5372139ad91ccf3b66f5381cff8fd274d702fc07ad",
+    "Scripts/NingPatchDependencies.py": "3369e3ee0c14087e2d107b989d0a55afdb22b88dfe61fe958f15af2dc9f34e3d"
   },
   "submodules": {
     "Deps/DepictionKit": "1ae6ad6ad6f8a7fc3194683c865d3f4b5a4072f9"

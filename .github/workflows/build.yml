@@ -50,6 +50,7 @@ jobs:
           mkdir -p build-logs
           xcodebuild -resolvePackageDependencies -project Sileo.xcodeproj -scheme Sileo \
             -clonedSourcePackagesDirPath "$RUNNER_TEMP/SileoPackages" 2>&1 | tee build-logs/resolve.log
+          python3 Scripts/NingPatchDependencies.py --packages "$RUNNER_TEMP/SileoPackages"
           xcodebuild -project Sileo.xcodeproj -scheme Sileo -configuration Release \
             -sdk iphoneos -destination 'generic/platform=iOS' \
             -derivedDataPath "$RUNNER_TEMP/SileoBuild" \
