@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Apply the smallest source-level Alderis compatibility fix after SwiftPM resolution."""
-import argparse, hashlib, re
+import argparse, hashlib, re, stat
 from pathlib import Path
 
 parser = argparse.ArgumentParser()
@@ -21,6 +21,8 @@ text = property_pattern.sub(r'\1var selectedColorPickerTab: ColorPickerTab {', t
 text = assignment_pattern.sub(r'\1selectedColorPickerTab = configuration.initialTab', text, count=1)
 if 'var tab: ColorPickerTab' in text or 'tab = configuration.initialTab' in text:
     raise SystemExit('Alderis compatibility replacement was incomplete')
+original_mode = stat.S_IMODE(path.stat().st_mode)
+path.chmod(original_mode | stat.S_IWUSR)
 path.write_text(text, encoding='utf-8')
 print(json_line := {
     'file': str(path),

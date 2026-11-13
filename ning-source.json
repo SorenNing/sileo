@@ -795,7 +795,7 @@
     "layout/DEBIAN/prerm": "c10b8d9778ddf0b837c4d81c099fa8944651db02ddfef865b76e7527d75edf23",
     "layout/DEBIAN/prerm-mac": "f4e1dcbe615c4cc9aefee73cacf84da3279068a8905c11bce4204145edde06b9",
     "layout/DEBIAN/triggers": "8dc4d5028d40c9fe9a480d5372139ad91ccf3b66f5381cff8fd274d702fc07ad",
-    "Scripts/NingPatchDependencies.py": "3369e3ee0c14087e2d107b989d0a55afdb22b88dfe61fe958f15af2dc9f34e3d"
+    "Scripts/NingPatchDependencies.py": "0f69b5e72be55d32a36e63365a777316504a4937a7a733ce05570c23d6c51c4c"
   },
   "submodules": {
     "Deps/DepictionKit": "1ae6ad6ad6f8a7fc3194683c865d3f4b5a4072f9"
